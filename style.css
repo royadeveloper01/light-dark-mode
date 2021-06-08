@@ -87,7 +87,9 @@ a:focus {
 }
 
 /* About Section */
-.about-container {
+
+/* Designs Section */
+.designs-container {
   display: flex;
 }
 
@@ -106,8 +108,7 @@ img {
   width: 300px;
 }
 
-/* Projects Section */
-.buttons {
+/* .buttons {
   margin-top: 15px;
   margin-bottom: 50px;
 }
@@ -156,10 +157,10 @@ button:hover:not(.outline) {
 .outline:hover {
   background: var(--primary-color);
   color: var(--on-primary);
-}
+} */
 
 .text-box {
-  width: 40%;
+  width: 50%;
   text-align: justify;
   background: rgb(0 0 0 / 50%);
   color: var(--on-primary);
