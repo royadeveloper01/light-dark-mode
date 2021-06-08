@@ -87,6 +87,19 @@ a:focus {
 }
 
 /* About Section */
+.text-box {
+  width: 50%;
+  text-align: justify;
+  background: rgb(0 0 0 / 50%);
+  color: var(--on-primary);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+p {
+  margin: 0;
+  line-height: 25px;
+}
 
 /* Designs Section */
 .designs-container {
@@ -106,20 +119,6 @@ a:focus {
 img {
   height: 300px;
   width: 300px;
-}
-
-.text-box {
-  width: 50%;
-  text-align: justify;
-  background: rgb(0 0 0 / 50%);
-  color: var(--on-primary);
-  border-radius: 10px;
-  padding: 30px;
-}
-
-p {
-  margin: 0;
-  line-height: 25px;
 }
 
 /* Contact Section */
