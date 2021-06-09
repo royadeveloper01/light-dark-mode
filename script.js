@@ -6,29 +6,23 @@ const image2 = document.getElementById('image2');
 const image3 = document.getElementById('image3');
 const textBox = document.getElementById('text-box');
 
-// Dark Mode Styles
-function darkMode() {
-    nav.style.backgroundColor = 'rgb(0 0 0 / 50%)';
-    textBox.style.backgroundColor = 'rgb(255 255 255 / 60%)'
-    toggleIcon.children[0].classList.replace('fa-sun', 'fa-moon');
+// Toggle Dark Light Modes
+function toggleLightDarkMode(isDark) {
+    nav.style.backgroundColor = isDark ? 'rgb(0 0 0 / 50%)' : 'rgb(255 255 255 / 50%)';
+    textBox.style.backgroundColor = isDark ? 'rgb(255 255 255 / 60%)' : 'rgb(0 0 0 / 80%)';
+    isDark ? toggleIcon.children[0].classList.replace('fa-sun', 'fa-moon') : toggleIcon.children[0].classList.replace('fa-moon', 'fa-sun');
 }
 
-// Light Mode Styles
-function lightMode() {
-    nav.style.backgroundColor = 'rgb(255 255 255 / 50%)'
-    textBox.style.backgroundColor = 'rgb(0 0 0 / 80%)';
-    toggleIcon.children[0].classList.replace('fa-moon', 'fa-sun');
-}
 // Switch Theme Dynamically
 function switchTheme(e) {
     if(e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        darkMode();
+        toggleLightDarkMode(true);
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        lightMode();
+        toggleLightDarkMode(false);
     }
 }
 
@@ -43,6 +37,6 @@ if(currentTheme) {
 
     if(currentTheme === 'dark') {
         toggleSwitch.checked = true;
-        darkMode();
+        toggleLightDarkMode(true);
     }
 }
