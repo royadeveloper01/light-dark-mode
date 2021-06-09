@@ -205,6 +205,6 @@ input:checked + .slider::before {
 }
 
 .fas {
-  font-size: 30px;
+  font-size: 25px;
   margin-right: 5px;
 }
