@@ -111,7 +111,6 @@ p {
   padding: 10px 20px;
   margin-right: 25px;
   width: auto;
-  background: var(--background);
   box-shadow: var(--box-shadow);
 }
 
